@@ -1,2 +1,1 @@
-# EQLoL
-League of Legends Team Builder
+# EQLoL-League-of-Legends-Team-Builder
