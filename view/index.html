@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EQLoL - Home</title>
+    <title>EQLoL - League of Legends Team Builder</title>
     <link rel="icon" href="/images/favicon.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="css/stylesheet.css">
     <!-- Bootstrap CSS -->
@@ -15,19 +15,20 @@
 </head>
 
 <body>
-    <!-- templates used from Bootstrap: -->
+    <!-- templates from Bootstrap -->
     <!-- Navbar (Home, Teams, Champions, Items, Builds, Team Builder)-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary flex-column">
+    <nav class="navbar navbar-expand-lg navbar-dark flex-column" style="padding-top: 0; padding-bottom: 0;">
         <!-- top row: application name -->
-        <div class="container-fluid justify-content-start">
-            <a class="navbar-brand fw-bold" href="index.html">
+        <div class="container-fluid bg-black justify-content-start">
+            <a class="navbar-brand fw-bold gradient-text" href="index.html">
                 <img src="images/favicon.jpeg" width="32" height="32" class="me-2">
                 EQLoL
             </a>
         </div>
-
+    </nav>
+    <nav class="navbar-bottom navbar-expand-lg navbar-dark flex-column sticky-top" style="padding-top: 0; padding-bottom: 0;">
         <!-- bottom row: options -->
-        <div class="container-fluid">
+        <div class="container-fluid bg-dark py-2 sticky-top">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,7 +36,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Teams</a>
@@ -47,10 +48,10 @@
                         <a class="nav-link" href="#">Items</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">Builds</a>
+                        <a class="nav-link" href="#">Builds</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">Team Builder</a>
+                        <a class="nav-link" href="#">Team Builder</a>
                     </li>
                 </ul>
             </div>
@@ -58,21 +59,21 @@
     </nav>
 
     <!-- Banner section-->
-    <div class="p-5 mt-2 bg-success text-white text-center" style="min-height: 90vh;">
+    <div class="banner-section p-5 text-white text-center" style="min-height: 90vh;">
         <div class="container">
             <div class="row align-items-center">
 
                 <div class="col-md-6 text-center text-md-start">
-                    <span class="badge bg-primary mb-3">LEAGUE OF LEGENDS</span>
+                    <span class="banner-badge badge bg-primary mb-3">LEAGUE OF LEGENDS</span>
 
-                    <h1>BUILD YOUR <br> DREAM TEAM</h1>
+                    <h1 class="banner">BUILD YOUR <br> DREAM TEAM</h1>
 
                     <p>
-                        Create team comps and share the best teams made by fans <br> with our
-                        EQLoL: League of Legends Team Builder.
+                        Create team compositions and share the best teams made by <br> the community with our
+                        EQLoL: League of Legends Team Builder
                     </p>
 
-                    <button type="button" class="btn btn-primary btn-lg">Start Building</button>
+                    <button type="button" class="btn btn-primary btn-lg">START BUILDING</button>
                 </div>
 
                 <div class="col-md-6 text-center mt-4 mt-md-0">
@@ -83,7 +84,7 @@
     </div>
 
     <!-- Teams section-->
-    <div class="p-5 bg-dark text-white text-center" style="min-height: 90vh;">
+    <div class="p-5 bg-danger text-white text-center" style="min-height: 90vh;">
         <div class="container">
             <div class="row align-items-center">
 
@@ -91,7 +92,7 @@
                     <h2>FEATURED TEAMS</h2>
 
                     <p>
-                        Discover and upvote team compositions shared by the community
+                        Discover and upvote team comps shared by the community
                     </p>
 
                     <button type="button" class="btn btn-primary btn-md">Show More</button>
@@ -119,7 +120,7 @@
     </div>
 
     <!-- Items section-->
-    <div class="p-5 bg-dark text-white text-center" style="min-height: 90vh;">
+    <div class="p-5 bg-danger text-white text-center" style="min-height: 90vh;">
         <div class="container">
             <div class="row align-items-center">
 
@@ -155,7 +156,7 @@
     </div>
 
     <!-- Team Builder section-->
-    <div class="p-5 bg-dark text-white text-center" style="min-height: 90vh;">
+    <div class="p-5 bg-danger text-white text-center" style="min-height: 90vh;">
         <div class="container">
             <div class="row align-items-center">
 
@@ -173,9 +174,9 @@
     </div>
 
     <!-- Footer -->
-    <footer class="text-center p-3" style="font-size: 0.9rem; color:#aeaeae;">
+    <footer class="text-center p-3 bg-black" style="font-size: 0.9rem; color:#aeaeae;">
         © 2026 EQLoL: League of Legends Team Builder ·
-        <a href="#" style="color:#aeaeae; text-decoration:none;">About</a>
+        <a href="#" class="about-link" style="color:#aeaeae; text-decoration:none;">About</a>
     </footer>
 
     <!-- Bootstrap Javascript -->
@@ -183,7 +184,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous">
     </script>
-    
+
 </body>
 
 </html>
