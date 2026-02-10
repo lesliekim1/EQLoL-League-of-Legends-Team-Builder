@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EQLoL - League of Legends Team Builder</title>
     <link rel="icon" href="/images/favicon.jpeg" type="image/jpeg">
-    <link rel="stylesheet" href="css/stylesheet.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <!-- Icons library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 
 <body>
@@ -26,7 +26,8 @@
             </a>
         </div>
     </nav>
-    <nav class="navbar-bottom navbar-expand-lg navbar-dark flex-column sticky-top" style="padding-top: 0; padding-bottom: 0;">
+    <nav class="navbar-bottom navbar-expand-lg navbar-dark flex-column sticky-top"
+        style="padding-top: 0; padding-bottom: 0;">
         <!-- bottom row: options -->
         <div class="container-fluid bg-dark py-2 sticky-top">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -66,8 +67,7 @@
                 <div class="col-md-6 text-center text-md-start">
                     <span class="banner-badge badge bg-primary mb-3">LEAGUE OF LEGENDS</span>
 
-                    <h1 class="banner">BUILD YOUR <br> DREAM TEAM</h1>
-
+                    <h1>BUILD YOUR <br> DREAM TEAM</h1>
                     <p>
                         Create team compositions and share the best teams made by <br> the community with our
                         EQLoL: League of Legends Team Builder
@@ -84,20 +84,127 @@
     </div>
 
     <!-- Teams section-->
-    <div class="p-5 bg-danger text-white text-center" style="min-height: 90vh;">
+    <div class="teams-section p-5 text-white text-center">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row">
 
                 <div class="text-center">
                     <h2>FEATURED TEAMS</h2>
-
                     <p>
                         Discover and upvote team comps shared by the community
                     </p>
+                </div>
 
-                    <button type="button" class="btn btn-primary btn-md">Show More</button>
+
+                <div class="row g-4">
+                    <!-- CARD 1 (placeholder) -->
+                    <div class="col-12 col-md-4">
+                        <a href="#" class="team-card-link">
+                            <div class="team-card h-100">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="d-flex align-items-center gap-2 mb-3 flex-wrap team-icons">
+                                        <img src="images/champ_icons/amumu.png" class="champ-icon" alt="Amumu">
+                                        <img src="images/champ_icons/ashe.png" class="champ-icon" alt="Ashe">
+                                        <img src="images/champ_icons/lux.png" class="champ-icon" alt="Lux">
+                                        <img src="images/champ_icons/miss_fortune.png" class="champ-icon"
+                                            alt="Miss Fortune">
+                                        <img src="images/champ_icons/morgana.png" class="champ-icon" alt="Morgana">
+                                    </div>
+
+                                    <h5 class="fw-bold text-center mb-3 team-title">poke</h5>
+
+                                    <div
+                                        class="d-flex justify-content-between align-items-center small text-muted mt-auto team-meta">
+                                        <span class="d-flex align-items-center gap-2">
+                                            <span class="badge rounded-pill team-badge">ARAM</span>
+                                            <span class="d-flex align-items-center gap-1 team-upvotes">
+                                                <i class="bi bi-arrow-up-circle"></i> 4
+                                            </span>
+                                        </span>
+
+                                        <span class="time-posted">4m</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- CARD 2 (placeholder) -->
+                    <div class="col-12 col-md-4">
+                        <a href="#" class="team-card-link">
+                            <div class="team-card h-100">
+                                <div class="card-body d-flex flex-column">
+
+                                    <div class="d-flex align-items-center gap-2 mb-3 flex-wrap team-icons">
+                                        <img src="images/champ_icons/camille.png" class="champ-icon" alt="Amumu">
+                                        <img src="images/champ_icons/shen.png" class="champ-icon" alt="Ashe">
+                                        <img src="images/champ_icons/yasuo.png" class="champ-icon" alt="Lux">
+                                        <img src="images/champ_icons/jinx.png" class="champ-icon" alt="Miss Fortune">
+                                        <img src="images/champ_icons/blitzcrank.png" class="champ-icon" alt="Morgana">
+                                    </div>
+
+                                    <h5 class="fw-bold text-center mb-3 team-title">Shen JG</h5>
+
+                                    <div
+                                        class="d-flex justify-content-between align-items-center small text-muted mt-auto team-meta">
+                                        <span class="d-flex align-items-center gap-2">
+                                            <span class="badge rounded-pill team-badge">Normal</span>
+                                            <span class="d-flex align-items-center gap-1 team-upvotes">
+                                                <i class="bi bi-arrow-up-circle"></i> 12
+                                            </span>
+                                        </span>
+
+                                        <span class="time-posted">6m</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- CARD 3 (placeholder) -->
+                    <div class="col-12 col-md-4">
+                        <a href="#" class="team-card-link">
+                            <div class="team-card h-100">
+                                <div class="card-body d-flex flex-column">
+
+                                    <div class="d-flex align-items-center gap-2 mb-3 flex-wrap team-icons">
+                                        <img src="images/champ_icons/darius.png" class="champ-icon" alt="Amumu">
+                                        <img src="images/champ_icons/viego.png" class="champ-icon" alt="Ashe">
+                                        <img src="images/champ_icons/ryze.png" class="champ-icon" alt="Lux">
+                                        <img src="images/champ_icons/samira.png" class="champ-icon" alt="Miss Fortune">
+                                        <img src="images/champ_icons/zyra.png" class="champ-icon" alt="Morgana">
+                                    </div>
+
+                                    <h5 class="fw-bold text-center mb-3 team-title">Viego Carry</h5>
+
+                                    <div
+                                        class="d-flex justify-content-between align-items-center small text-muted mt-auto team-meta">
+                                        <span class="d-flex align-items-center gap-2">
+                                            <span class="badge rounded-pill team-badge">Ranked</span>
+                                            <span class="d-flex align-items-center gap-1 team-upvotes">
+                                                <i class="bi bi-arrow-up-circle"></i> 2
+                                            </span>
+                                        </span>
+
+                                        <span class="time-posted">4m</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
             </div>
+
+            <!-- See ALl Teams arrow -->
+            <div class="mt-4">
+                <a href="#" class="see-all-teams d-inline-flex align-items-center gap-2">
+                    <span>See All Teams</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
         </div>
     </div>
 
@@ -181,9 +288,8 @@
 
     <!-- Bootstrap Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
 
 </body>
 
