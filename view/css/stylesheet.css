@@ -35,6 +35,10 @@ body {
 }
 
 /* Footer CSS */
+footer {
+    margin-top: 3em;
+}
+
 footer a:hover {
     color: rgb(203, 200, 200) !important;
 }
@@ -52,7 +56,6 @@ footer a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
 
 .banner-badge {
@@ -85,6 +88,7 @@ footer a:hover {
     letter-spacing: 0.05em;
     border: none;
     background: linear-gradient(90deg, #444fe3 0%, #cf2feb 70%, #60a5fa 100%);
+    transition: transform 0.25s ease;
 }
 
 .banner-section .btn:hover {
@@ -93,6 +97,8 @@ footer a:hover {
         0 14px 32px rgba(0, 0, 0, 0.45),
         0 0 22px rgba(34, 211, 238, 0.30),
         0 0 44px rgba(139, 92, 246, 0.22);
+    transition: transform 0.25s ease;
+    transform: scale(1.05);
 }
 
 .banner-section img {
@@ -187,7 +193,7 @@ footer a:hover {
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.02rem;
 }
 
 .see-all-teams span:hover {
@@ -245,7 +251,7 @@ footer a:hover {
 }
 
 .team-card-link:hover .champ-card {
-    transform: scale(1.05);
+    transform: translateY(-6px);
 }
 
 .team-card-link:hover h5 {
@@ -253,23 +259,63 @@ footer a:hover {
 }
 
 .role-subtext {
-  font-size: 0.9rem !important;
-  color: rgb(162, 162, 162) !important;
-  margin-top: -4px !important;
+    font-size: 0.9rem !important;
+    color: rgb(162, 162, 162) !important;
+    margin-top: -4px !important;
 }
 
 .role-subtext-num {
-  font-size: 0.9rem !important;
-  color: rgb(227, 223, 117) !important;
-  margin-top: 7px !important;
-  margin-bottom: 20px !important;
-  font-weight: 500;
+    font-size: 0.9rem !important;
+    color: #F2BE00 !important;
+    margin-top: 7px !important;
+    margin-bottom: 20px !important;
+    font-weight: 500;
 }
 
 /* Items section */
 .items-section {
-    background-color: #151e34;
+    background-color: #18223b;
     border-top: 3px solid rgba(255, 255, 255, 0.071);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.071);
 }
 
 /* Builds section */
+.champ-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+.champ-card:hover {
+    transform: translateY(-6px);
+    border: 1px solid rgb(252, 222, 69);
+    box-shadow:
+        0 0 0 1px rgba(255, 221, 49, 0.35),
+        0 0 18px rgba(255, 221, 49, 0.35),
+        0 0 36px rgba(255, 221, 49, 0.25),
+        0 16px 32px rgba(0, 0, 0, 0.55);
+}
+
+.card-body .btn {
+    padding: 10px 10px;
+    margin-top: 3em !important;
+    font-size: 1.15rem;
+    margin-bottom: 15px !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-body .btn:hover {
+    transition: transform 0.25s ease;
+    transform: scale(1.05);
+}
+
+.champ-icon {
+    margin-top: 1em !important;
+}
+
+.b-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    border: 1.4px solid rgb(255, 221, 49);
+    background-color: #1C1F24;
+    padding: 3px;
+}

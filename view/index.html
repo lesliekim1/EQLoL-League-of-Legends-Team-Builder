@@ -11,14 +11,15 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <!-- Icons library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 
 <body>
-    <!-- templates from Bootstrap -->
-    <!-- Navbar (Home, Teams, Champions, Items, Builds, Team Builder)-->
+    <!-- templates are from Bootstrap (navbar, card) -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark flex-column" style="padding-top: 0; padding-bottom: 0;">
-        <!-- top row: application name -->
+        <!-- top row: web app name -->
         <div class="container-fluid bg-black justify-content-start">
             <a class="navbar-brand fw-bold gradient-text" href="index.html">
                 <img src="images/favicon.jpeg" width="32" height="32" class="me-2">
@@ -28,7 +29,7 @@
     </nav>
     <nav class="navbar-bottom navbar-expand-lg navbar-dark flex-column sticky-top"
         style="padding-top: 0; padding-bottom: 0;">
-        <!-- bottom row: options -->
+        <!-- bottom row: options (Home, Teams, Champions, Items, Builds, Team Builder) -->
         <div class="container-fluid bg-dark py-2 sticky-top">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,12 +103,11 @@
                             <div class="team-card h-100">
                                 <div class="card-body d-flex flex-column">
                                     <div class="d-flex align-items-center gap-2 mb-3 flex-wrap team-icons">
-                                        <img src="images/champ_icons/amumu.png" class="champ-icon" alt="Amumu">
-                                        <img src="images/champ_icons/ashe.png" class="champ-icon" alt="Ashe">
-                                        <img src="images/champ_icons/lux.png" class="champ-icon" alt="Lux">
-                                        <img src="images/champ_icons/miss_fortune.png" class="champ-icon"
-                                            alt="Miss Fortune">
-                                        <img src="images/champ_icons/morgana.png" class="champ-icon" alt="Morgana">
+                                        <img src="images/champ_icons/amumu.png" class="champ-icon">
+                                        <img src="images/champ_icons/ashe.png" class="champ-icon">
+                                        <img src="images/champ_icons/lux.png" class="champ-icon">
+                                        <img src="images/champ_icons/miss_fortune.png" class="champ-icon">
+                                        <img src="images/champ_icons/morgana.png" class="champ-icon">
                                     </div>
 
                                     <h5 class="fw-bold text-center mb-3 team-title">poke</h5>
@@ -135,11 +135,11 @@
                                 <div class="card-body d-flex flex-column">
 
                                     <div class="d-flex align-items-center gap-2 mb-3 flex-wrap team-icons">
-                                        <img src="images/champ_icons/camille.png" class="champ-icon" alt="Amumu">
-                                        <img src="images/champ_icons/shen.png" class="champ-icon" alt="Ashe">
-                                        <img src="images/champ_icons/yasuo.png" class="champ-icon" alt="Lux">
-                                        <img src="images/champ_icons/jinx.png" class="champ-icon" alt="Miss Fortune">
-                                        <img src="images/champ_icons/blitzcrank.png" class="champ-icon" alt="Morgana">
+                                        <img src="images/champ_icons/camille.png" class="champ-icon">
+                                        <img src="images/champ_icons/shen.png" class="champ-icon">
+                                        <img src="images/champ_icons/yasuo.png" class="champ-icon">
+                                        <img src="images/champ_icons/jinx.png" class="champ-icon">
+                                        <img src="images/champ_icons/blitzcrank.png" class="champ-icon">
                                     </div>
 
                                     <h5 class="fw-bold text-center mb-3 team-title">River</h5>
@@ -167,11 +167,11 @@
                                 <div class="card-body d-flex flex-column">
 
                                     <div class="d-flex align-items-center gap-2 mb-3 flex-wrap team-icons">
-                                        <img src="images/champ_icons/darius.png" class="champ-icon" alt="Amumu">
-                                        <img src="images/champ_icons/viego.png" class="champ-icon" alt="Ashe">
-                                        <img src="images/champ_icons/ryze.png" class="champ-icon" alt="Lux">
-                                        <img src="images/champ_icons/samira.png" class="champ-icon" alt="Miss Fortune">
-                                        <img src="images/champ_icons/zyra.png" class="champ-icon" alt="Morgana">
+                                        <img src="images/champ_icons/darius.png" class="champ-icon">
+                                        <img src="images/champ_icons/viego.png" class="champ-icon">
+                                        <img src="images/champ_icons/ryze.png" class="champ-icon">
+                                        <img src="images/champ_icons/samira.png" class="champ-icon">
+                                        <img src="images/champ_icons/zyra.png" class="champ-icon">
                                     </div>
 
                                     <h5 class="fw-bold text-center mb-3 team-title">Viego Carry</h5>
@@ -213,7 +213,7 @@
             <div class="row">
 
                 <div class="text-center">
-                    <h2>FEATURED CHAMPIONS</h2>
+                    <h2>SELECT YOUR ROLE</h2>
                     <p>
                         Explore all champions in Summoner's Rift
                     </p>
@@ -245,7 +245,7 @@
 
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="fw-bold text-center team-title">JUNGLE</h5>
-                                    <p class="role-subtext mb-0">Gank, Farm, &amp; Control</p>
+                                    <p class="role-subtext mb-0">Farm, &amp; Control</p>
                                     <p class="role-subtext-num mb-0">35+ Champions</p>
                                 </div>
                             </div>
@@ -383,23 +383,121 @@
         </div>
     </div>
 
-    <!-- Builds section-->
-    <div class=" builds-section p-5 text-white text-center" style="min-height: 90vh;">
+    <!-- Builds section (features 4 randomly selected champ builds) -->
+    <div class="builds-section p-5 text-white text-center">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row">
 
                 <div class="text-center">
                     <h2>POPULAR BUILDS</h2>
-
                     <p>
-                        Optimized champion builds for competitive play
+                        Top performing builds for the current meta
                     </p>
+                </div>
 
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+                    <!-- CARD 1 -->
+                    <div class="col-12 col-md-4">
 
+                        <div class="champ-card h-100 bg-dark">
+                            <img src="images/champ_icons/zaahen.png" class="champ-icon">
 
-                    <button type="button" class="btn btn-primary btn-md">Show More</button>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="fw-bold text-center team-title">Zaahen</h5>
+                                <p class="role-subtext mb-0">Top</p>
+
+                                <!-- rune and item -->
+                                <div class="d-flex justify-content-center gap-3 my-3 build-icons">
+                                    <img src="images/runes_icons/Conqueror_rune.png" class="b-icon">
+                                    <img src="images/items_icons/trinity_force.png" class="b-icon">
+                                </div>
+
+                                <a href="#" class="btn btn-warning fw-bold text-uppercase mt-auto">
+                                    View Build
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-12 col-md-4">
+                        <div class="champ-card h-100 bg-dark">
+                            <img src="images/champ_icons/yunara.png" class="champ-icon">
+
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="fw-bold text-center team-title">Yunara</h5>
+                                <p class="role-subtext mb-0">ADC</p>
+
+                                <!-- rune and item -->
+                                <div class="d-flex justify-content-center gap-3 my-3 build-icons">
+                                    <img src="images/runes_icons/Lethal_Tempo_rune.png" class="b-icon">
+                                    <img src="images/items_icons/kraken_slayer.png" class="b-icon">
+                                </div>
+
+                                <a href="#" class="btn btn-warning fw-bold text-uppercase mt-auto">
+                                    View Build
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="col-12 col-md-4">
+
+                        <div class="champ-card h-100 bg-dark">
+                            <img src="images/champ_icons/teemo.png" class="champ-icon">
+
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="fw-bold text-center team-title">Teemo</h5>
+                                <p class="role-subtext mb-0">Top</p>
+
+                                <!-- rune and item -->
+                                <div class="d-flex justify-content-center gap-3 my-3 build-icons">
+                                    <img src="images/runes_icons/Press_the_Attack_rune.png" class="b-icon">
+                                    <img src="images/items_icons/nashors_tooth.png" class="b-icon">
+                                </div>
+
+                                <a href="#" class="btn btn-warning fw-bold text-uppercase mt-auto">
+                                    View Build
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="col-12 col-md-4">
+                        <div class="champ-card h-100 bg-dark">
+                            <img src="images/champ_icons/Pyke.png" class="champ-icon">
+
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="fw-bold text-center team-title">Pyke</h5>
+                                <p class="role-subtext mb-0">Support</p>
+
+                                <!-- rune and item -->
+                                <div class="d-flex justify-content-center gap-3 my-3 build-icons">
+                                    <img src="images/runes_icons/Hail_of_Blades_rune.png" class="b-icon">
+                                    <img src="images/items_icons/celestial_opposition.png" class="b-icon">
+                                </div>
+
+                                <a href="#" class="btn btn-warning fw-bold text-uppercase mt-auto">
+                                    View Build
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
+            <!-- See All Builds arrow -->
+            <div class="mt-4">
+                <a href="#" class="see-all-teams d-inline-flex align-items-center gap-2">
+                    <span>See All Builds</span>
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
         </div>
     </div>
 
