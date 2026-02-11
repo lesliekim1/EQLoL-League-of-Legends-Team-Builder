@@ -1,5 +1,5 @@
 body {
-    background-color: #233044;
+    background-color: #151e34;
     color: #e6edf3;
 }
 
@@ -107,7 +107,8 @@ footer a:hover {
 
 .teams-section h2,
 .champs-section h2,
-.items-section h2 {
+.items-section h2,
+.builds-section h2 {
     font-size: 4.5rem;
     color: #fefae4;
     line-height: 0.95;
@@ -118,7 +119,8 @@ footer a:hover {
 
 .teams-section p,
 .champs-section p,
-.items-section p {
+.items-section p,
+.builds-section p {
     margin-top: 1.25rem;
     font-size: 1.15rem;
     line-height: 1.7;
@@ -221,6 +223,7 @@ footer a:hover {
     height: 150px;
     margin: 0 auto 12px;
     border-radius: 0;
+    background-color: #1C1F24;
 }
 
 .champ-card .card-body {
@@ -249,8 +252,24 @@ footer a:hover {
     color: #e6e0e0;
 }
 
+.role-subtext {
+  font-size: 0.9rem !important;
+  color: rgb(162, 162, 162) !important;
+  margin-top: -4px !important;
+}
+
+.role-subtext-num {
+  font-size: 0.9rem !important;
+  color: rgb(227, 223, 117) !important;
+  margin-top: 7px !important;
+  margin-bottom: 20px !important;
+  font-weight: 500;
+}
+
 /* Items section */
 .items-section {
-    background-color: #2F4469;
-    border-top: 3px solid rgba(255, 255, 255, 0.04);
+    background-color: #151e34;
+    border-top: 3px solid rgba(255, 255, 255, 0.071);
 }
+
+/* Builds section */
