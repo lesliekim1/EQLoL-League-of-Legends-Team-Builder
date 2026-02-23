@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EQLoL - League of Legends Team Builder</title>
+    <link rel="icon" href="images/favicon.jpeg" type="image/jpeg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!-- Icons library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+    <!-- templates are from Bootstrap (navbar, card, flexbox) -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark flex-column" style="padding-top: 0; padding-bottom: 0;">
+        <!-- top row: web app name -->
+        <div class="container-fluid bg-black justify-content-start">
+            <a class="navbar-brand fw-bold gradient-text" href="index.html">
+                <img src="images/favicon.jpeg" width="32" height="32" class="me-2">
+                EQLoL
+            </a>
+        </div>
+    </nav>
+    <nav class="navbar-bottom navbar-expand-lg navbar-dark flex-column sticky-top"
+        style="padding-top: 0; padding-bottom: 0;">
+        <!-- bottom row: options (Home, Teams, Champions, Items, Builds, Team Builder) -->
+        <div class="container-fluid bg-dark py-2 sticky-top">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Champions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Builds</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team_builder.html">Team Builder</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <h1>League of Legends Team Builder</h1>
+
+    <form id="create-team-form">
+        <section>
+            <h2>Team <span>(required)</span></h2>
+
+            <label class="form-label" for="team_name">Team Name:</label>
+            <input class="form-control" name="team_name" required />
+
+            <label class="form-label" for="game_mode">Game Mode:</label>
+            <select class="form-select" name="game_mode" required>
+                <option value="normal">Normal</option>
+                <option value="ranked">Ranked</option>
+                <option value="aram">ARAM</option>
+            </select>
+        </section>
+
+
+
+        <section class="mt-4">
+            <h2>Champions & Builds <span>(required)</span></h2>
+
+            <div class="row text-center">
+
+                <!-- TOP -->
+                <div class="col-6 col-md-2">
+                    <img src="images/Top_icon.png" class="champ-icon mb-2">
+                    <div class="build-label">Build</div>
+
+                    <div class="build-grid">
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                    </div>
+
+                    <!-- this is the simplified version for rune (not the whole rune path, just the main one)-->
+                    <div class="rune-label">Rune</div>
+                    <div class="rune-slot">+</div>
+                </div>
+
+                <!-- JUNGLE -->
+                <div class="col-6 col-md-2">
+                    <img src="images/Jungle_icon.png" class="champ-icon mb-2">
+                    <div class="build-label">Build</div>
+                    <div class="build-grid">
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                    </div>
+
+                    <div class="rune-label">Rune</div>
+                    <div class="rune-slot">+</div>
+                </div>
+
+                <!-- MID -->
+                <div class="col-6 col-md-2">
+                    <img src="images/Middle_icon.png" class="champ-icon mb-2">
+                    <div class="build-label">Build</div>
+                    <div class="build-grid">
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                    </div>
+
+                    <div class="rune-label">Rune</div>
+                    <div class="rune-slot">+</div>
+                </div>
+
+                <!-- ADC -->
+                <div class="col-6 col-md-2">
+                    <img src="images/Bottom_icon.png" class="champ-icon mb-2">
+                    <div class="build-label">Build</div>
+                    <div class="build-grid">
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                    </div>
+
+                    <div class="rune-label">Rune</div>
+                    <div class="rune-slot">+</div>
+                </div>
+
+                <!-- SUPPORT -->
+                <div class="col-6 col-md-2">
+                    <img src="images/Support_icon.png" class="champ-icon mb-2">
+                    <div class="build-label">Build</div>
+                    <div class="build-grid">
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                        <div class="build-slot">+</div>
+                    </div>
+
+                    <div class="rune-label">Rune</div>
+                    <div class="rune-slot">+</div>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Guide <span>(optional)</span></h2>
+            <textarea id="team-guide" rows="12" cols="40"
+                placeholder="Enter your guide, tips, and information on how to use your team here."></textarea>
+        </section>
+
+
+        <section>
+            <h2>Post Protection <span>(required)</span></h2>
+
+            <label class="form-label" for="post_password">Password:</label>
+            <input class="form-control" type="password" name="post_password" id="post_password" minlength="8"
+                maxlength="20" required>
+
+            <!-- Confirm password -->
+            <label class="form-label" for="confirm_password">Confirm Password:</label>
+            <input class="form-control" type="password" name="confirm_password" id="confirm_password" minlength="8"
+                maxlength="20" required>
+        </section>
+
+        <button type="submit" class="btn btn-primary"> SAVE TEAM </button>
+    </form>
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-center p-3 bg-black" style="font-size: 0.9rem; color:#aeaeae;">
+        © 2026 EQLoL: League of Legends Team Builder ·
+        <a href="#" style="color:#aeaeae; text-decoration:none;">About</a>
+    </footer>
+
+
+    <!-- Bootstrap Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>
