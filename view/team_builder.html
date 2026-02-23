@@ -72,7 +72,7 @@
 
                         <div class="form-body">
                             <label class="form-label" for="team_name">Team Name:</label>
-                            <input class="form-control" id="team_name" name="team_name" placeholder="My Team"
+                            <input class="form-control" id="team_name" name="team_name" placeholder="Enter team name"
                                 required />
 
                             <label class="form-label mt-4" for="game_mode">Game Mode:</label>
@@ -87,100 +87,381 @@
                 </section>
 
 
-
                 <section class="mt-4">
                     <div class="form-section">
                         <h2 class="form-title">Champions & Builds <span class="form-span">(required)</span></h2>
 
                         <div class="form-body">
-                            <div class="row text-center">
+                            <div class="row text-center justify-content-center g-4">
 
-                                <!-- TOP -->
+                                <!-- Champion 1 -->
                                 <div class="col-6 col-md-2">
-                                    <img src="images/Top_icon.png" class="champ-icon mb-2">
-                                    <div class="build-label">Build</div>
 
-                                    <div class="build-grid">
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                    </div>
+                                    <!-- Select Champion -->
+                                    <label class="form-label mt-4" for="champ1">Champion:</label>
+                                    <select class="form-select" id="champ1" name="champ1" required>
+                                        <option value="" disabled selected hidden>Select champion</option>
+                                        <option value="amumu">Amumu</option>
+                                        <option value="ashe">Ashe</option>
+                                        <option value="blitzcrank">Blitzcrank</option>
+                                        <option value="camille">Camille</option>
+                                        <option value="darius">Darius</option>
+                                        <option value="jinx">Jinx</option>
+                                        <option value="lux">Lux</option>
+                                        <option value="miss_fortune">Miss Fortune</option>
+                                        <option value="morgana">Morgana</option>
+                                        <option value="pyke">Pyke</option>
+                                        <option value="ryze">Ryze</option>
+                                        <option value="samira">Samira</option>
+                                        <option value="shen">Shen</option>
+                                        <option value="teemo">Teemo</option>
+                                        <option value="viego">Viego</option>
+                                        <option value="yasuo">Yasuo</option>
+                                        <option value="yunara">Yunara</option>
+                                        <option value="zaahen">Zaahen</option>
+                                        <option value="zyra">Zyra</option>
+                                    </select>
 
-                                    <!-- this is the simplified version for rune (not the whole rune path, just the main one)-->
-                                    <div class="rune-label">Rune</div>
-                                    <div class="rune-slot">+</div>
+
+                                    <!-- Select Build Items (3) -->
+                                    <label class="form-label mt-4" for="build1">Build:</label>
+                                    <select class="form-select" id="build1Item1" name="build1Item1" required>
+                                        <option value="" disabled selected hidden>Select item 1</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+                                    <select class="form-select mt-3" id="build1Item2" name="build1Item2" required>
+                                        <option value="" disabled selected hidden>Select item 2</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+                                    <select class="form-select mt-3" id="build1Item3" name="build1Item3" required>
+                                        <option value="" disabled selected hidden>Select item 3</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+
+                                    <!-- Select rune (1) -->
+                                    <label class="form-label mt-4" for="rune1">Rune:</label>
+                                    <select class="form-select" id="rune1" name="rune1" required>
+                                        <option value="" disabled selected hidden>Select rune</option>
+                                        <option value="Conqueror_rune">Conqueror</option>
+                                        <option value="Hails_of_Blades_rune">Hails of Blade</option>
+                                        <option value="Lethal_Tempo_rune">Lethal Tempo</option>
+                                        <option value="Press_the_Attack_rune">Press the Attack</option>
+                                    </select>
                                 </div>
 
-                                <!-- JUNGLE -->
-                                <div class="col-6 col-md-2">
-                                    <img src="images/Jungle_icon.png" class="champ-icon mb-2">
-                                    <div class="build-label">Build</div>
-                                    <div class="build-grid">
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                    </div>
 
-                                    <div class="rune-label">Rune</div>
-                                    <div class="rune-slot">+</div>
+                                <!-- Champion 2 -->
+                                <div class="col-6 col-md-2">
+
+                                    <!-- Select Champion -->
+                                    <label class="form-label mt-4" for="champ2">Champion:</label>
+                                    <select class="form-select" id="champ2" name="champ2" required>
+                                        <option value="" disabled selected hidden>Select champion</option>
+                                        <option value="amumu">Amumu</option>
+                                        <option value="ashe">Ashe</option>
+                                        <option value="blitzcrank">Blitzcrank</option>
+                                        <option value="camille">Camille</option>
+                                        <option value="darius">Darius</option>
+                                        <option value="jinx">Jinx</option>
+                                        <option value="lux">Lux</option>
+                                        <option value="miss_fortune">Miss Fortune</option>
+                                        <option value="morgana">Morgana</option>
+                                        <option value="pyke">Pyke</option>
+                                        <option value="ryze">Ryze</option>
+                                        <option value="samira">Samira</option>
+                                        <option value="shen">Shen</option>
+                                        <option value="teemo">Teemo</option>
+                                        <option value="viego">Viego</option>
+                                        <option value="yasuo">Yasuo</option>
+                                        <option value="yunara">Yunara</option>
+                                        <option value="zaahen">Zaahen</option>
+                                        <option value="zyra">Zyra</option>
+                                    </select>
+
+
+                                    <!-- Select Build Items (3) -->
+                                    <label class="form-label mt-4" for="build2">Build:</label>
+                                    <select class="form-select" id="build2Item1" name="build2Item1" required>
+                                        <option value="" disabled selected hidden>Select item 1</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+                                    <select class="form-select mt-3" id="build2Item2" name="build2Item2" required>
+                                        <option value="" disabled selected hidden>Select item 2</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+                                    <select class="form-select mt-3" id="build2Item3" name="build2Item3" required>
+                                        <option value="" disabled selected hidden>Select item 3</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+
+                                    <!-- Select rune (1) -->
+                                    <label class="form-label mt-4" for="rune2">Rune:</label>
+                                    <select class="form-select" id="rune2" name="rune2" required>
+                                        <option value="" disabled selected hidden>Select rune</option>
+                                        <option value="Conqueror_rune">Conqueror</option>
+                                        <option value="Hails_of_Blades_rune">Hails of Blade</option>
+                                        <option value="Lethal_Tempo_rune">Lethal Tempo</option>
+                                        <option value="Press_the_Attack_rune">Press the Attack</option>
+                                    </select>
                                 </div>
 
-                                <!-- MID -->
-                                <div class="col-6 col-md-2">
-                                    <img src="images/Middle_icon.png" class="champ-icon mb-2">
-                                    <div class="build-label">Build</div>
-                                    <div class="build-grid">
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                    </div>
 
-                                    <div class="rune-label">Rune</div>
-                                    <div class="rune-slot">+</div>
+                                <!-- Champion 3 -->
+                                <div class="col-6 col-md-2">
+
+                                    <!-- Select Champion -->
+                                    <label class="form-label mt-4" for="champ3">Champion:</label>
+                                    <select class="form-select" id="champ3" name="champ3" required>
+                                        <option value="" disabled selected hidden>Select champion</option>
+                                        <option value="amumu">Amumu</option>
+                                        <option value="ashe">Ashe</option>
+                                        <option value="blitzcrank">Blitzcrank</option>
+                                        <option value="camille">Camille</option>
+                                        <option value="darius">Darius</option>
+                                        <option value="jinx">Jinx</option>
+                                        <option value="lux">Lux</option>
+                                        <option value="miss_fortune">Miss Fortune</option>
+                                        <option value="morgana">Morgana</option>
+                                        <option value="pyke">Pyke</option>
+                                        <option value="ryze">Ryze</option>
+                                        <option value="samira">Samira</option>
+                                        <option value="shen">Shen</option>
+                                        <option value="teemo">Teemo</option>
+                                        <option value="viego">Viego</option>
+                                        <option value="yasuo">Yasuo</option>
+                                        <option value="yunara">Yunara</option>
+                                        <option value="zaahen">Zaahen</option>
+                                        <option value="zyra">Zyra</option>
+                                    </select>
+
+
+                                    <!-- Select Build Items (3) -->
+                                    <label class="form-label mt-4" for="build3">Build:</label>
+                                    <select class="form-select" id="build3Item1" name="build3Item1" required>
+                                        <option value="" disabled selected hidden>Select item 1</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+                                    <select class="form-select mt-3" id="build3Item2" name="build3Item2" required>
+                                        <option value="" disabled selected hidden>Select item 2</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+                                    <select class="form-select mt-3" id="build3Item3" name="build3Item3" required>
+                                        <option value="" disabled selected hidden>Select item 3</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+
+                                    <!-- Select rune (1) -->
+                                    <label class="form-label mt-4" for="rune3">Rune:</label>
+                                    <select class="form-select" id="rune3" name="rune3" required>
+                                        <option value="" disabled selected hidden>Select rune</option>
+                                        <option value="Conqueror_rune">Conqueror</option>
+                                        <option value="Hails_of_Blades_rune">Hails of Blade</option>
+                                        <option value="Lethal_Tempo_rune">Lethal Tempo</option>
+                                        <option value="Press_the_Attack_rune">Press the Attack</option>
+                                    </select>
                                 </div>
 
-                                <!-- ADC -->
-                                <div class="col-6 col-md-2">
-                                    <img src="images/Bottom_icon.png" class="champ-icon mb-2">
-                                    <div class="build-label">Build</div>
-                                    <div class="build-grid">
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                    </div>
 
-                                    <div class="rune-label">Rune</div>
-                                    <div class="rune-slot">+</div>
+                                <!-- Champion 4 -->
+                                <div class="col-6 col-md-2">
+
+                                    <!-- Select Champion -->
+                                    <label class="form-label mt-4" for="champ4">Champion:</label>
+                                    <select class="form-select" id="champ4" name="champ4" required>
+                                        <option value="" disabled selected hidden>Select champion</option>
+                                        <option value="amumu">Amumu</option>
+                                        <option value="ashe">Ashe</option>
+                                        <option value="blitzcrank">Blitzcrank</option>
+                                        <option value="camille">Camille</option>
+                                        <option value="darius">Darius</option>
+                                        <option value="jinx">Jinx</option>
+                                        <option value="lux">Lux</option>
+                                        <option value="miss_fortune">Miss Fortune</option>
+                                        <option value="morgana">Morgana</option>
+                                        <option value="pyke">Pyke</option>
+                                        <option value="ryze">Ryze</option>
+                                        <option value="samira">Samira</option>
+                                        <option value="shen">Shen</option>
+                                        <option value="teemo">Teemo</option>
+                                        <option value="viego">Viego</option>
+                                        <option value="yasuo">Yasuo</option>
+                                        <option value="yunara">Yunara</option>
+                                        <option value="zaahen">Zaahen</option>
+                                        <option value="zyra">Zyra</option>
+                                    </select>
+
+
+                                    <!-- Select Build Items (3) -->
+                                    <label class="form-label mt-4" for="build4">Build:</label>
+                                    <select class="form-select" id="build4Item1" name="build4Item1" required>
+                                        <option value="" disabled selected hidden>Select item 1</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+                                    <select class="form-select mt-3" id="build4Item2" name="build4Item2" required>
+                                        <option value="" disabled selected hidden>Select item 2</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+                                    <select class="form-select mt-3" id="build4Item3" name="build4Item3" required>
+                                        <option value="" disabled selected hidden>Select item 3</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+
+                                    <!-- Select rune (1) -->
+                                    <label class="form-label mt-4" for="rune4">Rune:</label>
+                                    <select class="form-select" id="rune4" name="rune4" required>
+                                        <option value="" disabled selected hidden>Select rune</option>
+                                        <option value="Conqueror_rune">Conqueror</option>
+                                        <option value="Hails_of_Blades_rune">Hails of Blade</option>
+                                        <option value="Lethal_Tempo_rune">Lethal Tempo</option>
+                                        <option value="Press_the_Attack_rune">Press the Attack</option>
+                                    </select>
                                 </div>
 
-                                <!-- SUPPORT -->
+                                <!-- Champion 5 -->
                                 <div class="col-6 col-md-2">
-                                    <img src="images/Support_icon.png" class="champ-icon mb-2">
-                                    <div class="build-label">Build</div>
-                                    <div class="build-grid">
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                        <div class="build-slot">+</div>
-                                    </div>
 
-                                    <div class="rune-label">Rune</div>
-                                    <div class="rune-slot">+</div>
+                                    <!-- Select Champion -->
+                                    <label class="form-label mt-4" for="champ5">Champion:</label>
+                                    <select class="form-select" id="champ5" name="champ5" required>
+                                        <option value="" disabled selected hidden>Select champion</option>
+                                        <option value="amumu">Amumu</option>
+                                        <option value="ashe">Ashe</option>
+                                        <option value="blitzcrank">Blitzcrank</option>
+                                        <option value="camille">Camille</option>
+                                        <option value="darius">Darius</option>
+                                        <option value="jinx">Jinx</option>
+                                        <option value="lux">Lux</option>
+                                        <option value="miss_fortune">Miss Fortune</option>
+                                        <option value="morgana">Morgana</option>
+                                        <option value="pyke">Pyke</option>
+                                        <option value="ryze">Ryze</option>
+                                        <option value="samira">Samira</option>
+                                        <option value="shen">Shen</option>
+                                        <option value="teemo">Teemo</option>
+                                        <option value="viego">Viego</option>
+                                        <option value="yasuo">Yasuo</option>
+                                        <option value="yunara">Yunara</option>
+                                        <option value="zaahen">Zaahen</option>
+                                        <option value="zyra">Zyra</option>
+                                    </select>
+
+
+                                    <!-- Select Build Items (3) -->
+                                    <label class="form-label mt-4" for="build5">Build:</label>
+                                    <select class="form-select" id="build5Item1" name="build5Item1" required>
+                                        <option value="" disabled selected hidden>Select item 1</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+                                    <select class="form-select mt-3" id="build5Item2" name="build5Item2" required>
+                                        <option value="" disabled selected hidden>Select item 2</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+                                    <select class="form-select mt-3" id="build5Item3" name="build5Item3" required>
+                                        <option value="" disabled selected hidden>Select item 3</option>
+                                        <option value="bork">Blade of the Ruined King</option>
+                                        <option value="celestial_opposition">Celestial Opposition</option>
+                                        <option value="kraken_slayer">Kraken Slayer</option>
+                                        <option value="nashors_tooth">Nashors Tooth</option>
+                                        <option value="steraks_gage">Steraks Gage</option>
+                                        <option value="trinity_force">Trinity Force</option>
+                                        <option value="void_staff">Void Staff</option>
+                                    </select>
+
+                                    <!-- Select rune (1) -->
+                                    <label class="form-label mt-4" for="rune5">Rune:</label>
+                                    <select class="form-select" id="rune5" name="rune5" required>
+                                        <option value="" disabled selected hidden>Select rune</option>
+                                        <option value="Conqueror_rune">Conqueror</option>
+                                        <option value="Hails_of_Blades_rune">Hails of Blade</option>
+                                        <option value="Lethal_Tempo_rune">Lethal Tempo</option>
+                                        <option value="Press_the_Attack_rune">Press the Attack</option>
+                                    </select>
                                 </div>
+
                             </div>
 
                         </div>
@@ -210,7 +491,8 @@
                                 Why do I need a password?
                             </button>
                         </div>
-                        <div id="passwordHelpText" class="password-help form-text" style="visibility: hidden; color: white;">
+                        <div id="passwordHelpText" class="password-help form-text"
+                            style="visibility: hidden; color: white;">
                             Create a password to protect your post so you can edit or delete it later.
                         </div>
 
@@ -230,7 +512,8 @@
 
                 <div class="text-center">
                     <button type="submit"
-                        class="form-btn text-center btn btn-lg btn-warning fw-bold text-uppercase mt-4"> SAVE TEAM
+                        class="form-btn text-center btn btn-lg btn-warning fw-bold text-uppercase mt-4"> SAVE
+                        TEAM
                     </button>
                 </div>
             </form>
