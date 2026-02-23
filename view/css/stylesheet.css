@@ -302,3 +302,51 @@ footer a:hover {
     background-color: #1C1F24;
     padding: 3px;
 }
+
+
+/* team_builder.html */
+.build-container h1 {
+    color: #fefae4;
+    font-weight: 700;
+}
+
+.form-section {
+    background: #2f425b;
+    border-radius: 18px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 22px;
+}
+
+.form-body {
+    padding: 22px;
+}
+
+.form-title {
+    margin: 0;
+    color: #e5e7eb;
+}
+
+.form-span {
+    font-size: 0.9rem;
+    color: #c9d0de;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.form-btn {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-btn:hover {
+    transition: transform 0.25s ease;
+    transform: scale(1.05);
+}
+
+#passwordHelp {
+    color: #93c5fd;
+}
+
+#passwordHelp:hover {
+    color: #bfdbfe;
+}

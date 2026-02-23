@@ -16,7 +16,6 @@
 </head>
 
 <body>
-    <!-- templates are from Bootstrap (navbar, card, flexbox) -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark flex-column" style="padding-top: 0; padding-bottom: 0;">
         <!-- top row: web app name -->
@@ -61,144 +60,182 @@
     </nav>
 
 
-    <h1>League of Legends Team Builder</h1>
-
-    <form id="create-team-form">
-        <section>
-            <h2>Team <span>(required)</span></h2>
-
-            <label class="form-label" for="team_name">Team Name:</label>
-            <input class="form-control" name="team_name" required />
-
-            <label class="form-label" for="game_mode">Game Mode:</label>
-            <select class="form-select" name="game_mode" required>
-                <option value="normal">Normal</option>
-                <option value="ranked">Ranked</option>
-                <option value="aram">ARAM</option>
-            </select>
-        </section>
+    <div class="container py-5">
+        <div class="build-container mx-auto">
+            <h1>League of Legends Team Builder</h1>
+            <form id="create-team-form">
 
 
+                <section class="mt-4">
+                    <div class="form-section">
+                        <h2 class="form-title">Team <span class="form-span">(required)</span></h2>
 
-        <section class="mt-4">
-            <h2>Champions & Builds <span>(required)</span></h2>
+                        <div class="form-body">
+                            <label class="form-label" for="team_name">Team Name:</label>
+                            <input class="form-control" id="team_name" name="team_name" placeholder="My Team"
+                                required />
 
-            <div class="row text-center">
-
-                <!-- TOP -->
-                <div class="col-6 col-md-2">
-                    <img src="images/Top_icon.png" class="champ-icon mb-2">
-                    <div class="build-label">Build</div>
-
-                    <div class="build-grid">
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
+                            <label class="form-label mt-4" for="game_mode">Game Mode:</label>
+                            <select class="form-select" id="game_mode" name="game_mode" required>
+                                <option value="normal">Normal</option>
+                                <option value="ranked">Ranked</option>
+                                <option value="aram">ARAM</option>
+                            </select>
+                        </div>
                     </div>
 
-                    <!-- this is the simplified version for rune (not the whole rune path, just the main one)-->
-                    <div class="rune-label">Rune</div>
-                    <div class="rune-slot">+</div>
-                </div>
+                </section>
 
-                <!-- JUNGLE -->
-                <div class="col-6 col-md-2">
-                    <img src="images/Jungle_icon.png" class="champ-icon mb-2">
-                    <div class="build-label">Build</div>
-                    <div class="build-grid">
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
+
+
+                <section class="mt-4">
+                    <div class="form-section">
+                        <h2 class="form-title">Champions & Builds <span class="form-span">(required)</span></h2>
+
+                        <div class="form-body">
+                            <div class="row text-center">
+
+                                <!-- TOP -->
+                                <div class="col-6 col-md-2">
+                                    <img src="images/Top_icon.png" class="champ-icon mb-2">
+                                    <div class="build-label">Build</div>
+
+                                    <div class="build-grid">
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                    </div>
+
+                                    <!-- this is the simplified version for rune (not the whole rune path, just the main one)-->
+                                    <div class="rune-label">Rune</div>
+                                    <div class="rune-slot">+</div>
+                                </div>
+
+                                <!-- JUNGLE -->
+                                <div class="col-6 col-md-2">
+                                    <img src="images/Jungle_icon.png" class="champ-icon mb-2">
+                                    <div class="build-label">Build</div>
+                                    <div class="build-grid">
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                    </div>
+
+                                    <div class="rune-label">Rune</div>
+                                    <div class="rune-slot">+</div>
+                                </div>
+
+                                <!-- MID -->
+                                <div class="col-6 col-md-2">
+                                    <img src="images/Middle_icon.png" class="champ-icon mb-2">
+                                    <div class="build-label">Build</div>
+                                    <div class="build-grid">
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                    </div>
+
+                                    <div class="rune-label">Rune</div>
+                                    <div class="rune-slot">+</div>
+                                </div>
+
+                                <!-- ADC -->
+                                <div class="col-6 col-md-2">
+                                    <img src="images/Bottom_icon.png" class="champ-icon mb-2">
+                                    <div class="build-label">Build</div>
+                                    <div class="build-grid">
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                    </div>
+
+                                    <div class="rune-label">Rune</div>
+                                    <div class="rune-slot">+</div>
+                                </div>
+
+                                <!-- SUPPORT -->
+                                <div class="col-6 col-md-2">
+                                    <img src="images/Support_icon.png" class="champ-icon mb-2">
+                                    <div class="build-label">Build</div>
+                                    <div class="build-grid">
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                        <div class="build-slot">+</div>
+                                    </div>
+
+                                    <div class="rune-label">Rune</div>
+                                    <div class="rune-slot">+</div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
+                </section>
 
-                    <div class="rune-label">Rune</div>
-                    <div class="rune-slot">+</div>
-                </div>
 
-                <!-- MID -->
-                <div class="col-6 col-md-2">
-                    <img src="images/Middle_icon.png" class="champ-icon mb-2">
-                    <div class="build-label">Build</div>
-                    <div class="build-grid">
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
+                <section class="mt-4">
+                    <div class="form-section">
+                        <h2 class="form-title">Guide <span class="form-span">(optional)</span></h2>
+
+                        <div class="form-body">
+                            <textarea class="form-control" id="team-guide" name="team_guide" rows="6"
+                                placeholder="Enter your guide, tips, and information on how to use your team here."></textarea>
+                        </div>
                     </div>
+                </section>
 
-                    <div class="rune-label">Rune</div>
-                    <div class="rune-slot">+</div>
-                </div>
 
-                <!-- ADC -->
-                <div class="col-6 col-md-2">
-                    <img src="images/Bottom_icon.png" class="champ-icon mb-2">
-                    <div class="build-label">Build</div>
-                    <div class="build-grid">
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
+                <section class="mt-4">
+                    <div class="form-section">
+                        <h2 class="form-title">Post Protection <span class="form-span">(required)</span></h2>
+
+                        <!-- Password tip -->
+                        <div class="mt-2">
+                            <button type="button" class="btn btn-link p-0" id="passwordHelp" onclick="showHideHelp()">
+                                Why do I need a password?
+                            </button>
+                        </div>
+                        <div id="passwordHelpText" class="password-help form-text" style="visibility: hidden; color: white;">
+                            Create a password to protect your post so you can edit or delete it later.
+                        </div>
+
+
+                        <div class="form-body">
+                            <label class="form-label" for="post_password">Password:</label>
+                            <input class="form-control" type="password" name="post_password" id="post_password"
+                                minlength="8" maxlength="20" placeholder="8-20 characters" required>
+
+                            <!-- Confirm password -->
+                            <label class="form-label mt-4" for="confirm_password">Confirm Password:</label>
+                            <input class="form-control" type="password" name="confirm_password" id="confirm_password"
+                                minlength="8" maxlength="20" placeholder="Re-type password" required>
+                        </div>
                     </div>
+                </section>
 
-                    <div class="rune-label">Rune</div>
-                    <div class="rune-slot">+</div>
+                <div class="text-center">
+                    <button type="submit"
+                        class="form-btn text-center btn btn-lg btn-warning fw-bold text-uppercase mt-4"> SAVE TEAM
+                    </button>
                 </div>
-
-                <!-- SUPPORT -->
-                <div class="col-6 col-md-2">
-                    <img src="images/Support_icon.png" class="champ-icon mb-2">
-                    <div class="build-label">Build</div>
-                    <div class="build-grid">
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                        <div class="build-slot">+</div>
-                    </div>
-
-                    <div class="rune-label">Rune</div>
-                    <div class="rune-slot">+</div>
-                </div>
-            </div>
-        </section>
-
-
-        <section>
-            <h2>Guide <span>(optional)</span></h2>
-            <textarea id="team-guide" rows="12" cols="40"
-                placeholder="Enter your guide, tips, and information on how to use your team here."></textarea>
-        </section>
-
-
-        <section>
-            <h2>Post Protection <span>(required)</span></h2>
-
-            <label class="form-label" for="post_password">Password:</label>
-            <input class="form-control" type="password" name="post_password" id="post_password" minlength="8"
-                maxlength="20" required>
-
-            <!-- Confirm password -->
-            <label class="form-label" for="confirm_password">Confirm Password:</label>
-            <input class="form-control" type="password" name="confirm_password" id="confirm_password" minlength="8"
-                maxlength="20" required>
-        </section>
-
-        <button type="submit" class="btn btn-primary"> SAVE TEAM </button>
-    </form>
-
-
+            </form>
+        </div>
+    </div>
 
 
     <!-- Footer -->
@@ -212,6 +249,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
         </script>
+
+    <script>
+        const helpText = document.getElementById("passwordHelpText");
+
+        // Toggle visibility for password help text.
+        function showHideHelp() {
+            if (helpText.style.visibility === "hidden") {
+                helpText.style.visibility = "visible"
+            } else {
+                helpText.style.visibility = "hidden"
+            }
+        }
+    </script>
 
 </body>
 
