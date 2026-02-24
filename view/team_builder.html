@@ -63,9 +63,8 @@
     <div class="container py-5">
         <div class="build-container mx-auto">
             <h1>League of Legends Team Builder</h1>
-            <form id="create-team-form">
 
-
+            <form method="post" action="#">
                 <section class="mt-4">
                     <div class="form-section">
                         <h2 class="form-title">Team <span class="form-span">(required)</span></h2>
@@ -77,6 +76,7 @@
 
                             <label class="form-label mt-4" for="game_mode">Game Mode:</label>
                             <select class="form-select" id="game_mode" name="game_mode" required>
+                                <option value="" disabled selected hidden>Select game mode</option>
                                 <option value="normal">Normal</option>
                                 <option value="ranked">Ranked</option>
                                 <option value="aram">ARAM</option>
@@ -92,7 +92,7 @@
                         <h2 class="form-title">Champions & Builds <span class="form-span">(required)</span></h2>
 
                         <div class="form-body">
-                            <div class="row text-center justify-content-center g-4">
+                            <div class="row text-center justify-content-center gx-5 gy-4">
 
                                 <!-- Champion 1 -->
                                 <div class="col-6 col-md-2">
@@ -122,9 +122,8 @@
                                         <option value="zyra">Zyra</option>
                                     </select>
 
-
                                     <!-- Select Build Items (3) -->
-                                    <label class="form-label mt-4" for="build1">Build:</label>
+                                    <label class="form-label mt-4" for="build1Item1">Build:</label>
                                     <select class="form-select" id="build1Item1" name="build1Item1" required>
                                         <option value="" disabled selected hidden>Select item 1</option>
                                         <option value="bork">Blade of the Ruined King</option>
@@ -196,9 +195,8 @@
                                         <option value="zyra">Zyra</option>
                                     </select>
 
-
                                     <!-- Select Build Items (3) -->
-                                    <label class="form-label mt-4" for="build2">Build:</label>
+                                    <label class="form-label mt-4" for="build2Item1">Build:</label>
                                     <select class="form-select" id="build2Item1" name="build2Item1" required>
                                         <option value="" disabled selected hidden>Select item 1</option>
                                         <option value="bork">Blade of the Ruined King</option>
@@ -270,9 +268,8 @@
                                         <option value="zyra">Zyra</option>
                                     </select>
 
-
                                     <!-- Select Build Items (3) -->
-                                    <label class="form-label mt-4" for="build3">Build:</label>
+                                    <label class="form-label mt-4" for="build3Item1">Build:</label>
                                     <select class="form-select" id="build3Item1" name="build3Item1" required>
                                         <option value="" disabled selected hidden>Select item 1</option>
                                         <option value="bork">Blade of the Ruined King</option>
@@ -344,9 +341,8 @@
                                         <option value="zyra">Zyra</option>
                                     </select>
 
-
                                     <!-- Select Build Items (3) -->
-                                    <label class="form-label mt-4" for="build4">Build:</label>
+                                    <label class="form-label mt-4" for="build4Item1">Build:</label>
                                     <select class="form-select" id="build4Item1" name="build4Item1" required>
                                         <option value="" disabled selected hidden>Select item 1</option>
                                         <option value="bork">Blade of the Ruined King</option>
@@ -417,9 +413,8 @@
                                         <option value="zyra">Zyra</option>
                                     </select>
 
-
                                     <!-- Select Build Items (3) -->
-                                    <label class="form-label mt-4" for="build5">Build:</label>
+                                    <label class="form-label mt-4" for="build5Item1">Build:</label>
                                     <select class="form-select" id="build5Item1" name="build5Item1" required>
                                         <option value="" disabled selected hidden>Select item 1</option>
                                         <option value="bork">Blade of the Ruined King</option>
@@ -485,7 +480,7 @@
                     <div class="form-section">
                         <h2 class="form-title">Post Protection <span class="form-span">(required)</span></h2>
 
-                        <!-- Password tip -->
+                        <!-- Password help tip -->
                         <div class="mt-2">
                             <button type="button" class="btn btn-link p-0" id="passwordHelp" onclick="showHideHelp()">
                                 Why do I need a password?
