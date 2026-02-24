@@ -96,14 +96,13 @@
 
                                 <!-- Champion 1 -->
                                 <div class="col-6 col-md-2">
+                                    <label class="form-label mt-2" for="champ1">Champion:</label>
+                                    <br>
+                                    <img class="mb-2" id="champ1Preview" src="images/champ_icons/champ_placeholder.png"
+                                        width="80">
 
-                                    <!-- Champion preview image -->
-                                    <img class="mb-2" id="champ1Preview" src="images/champ_icons/champ_placeholder.png" width="80">
-
-                                    <!-- Select Champion -->
-                                    <label class="form-label mt-4" for="champ1">Champion:</label>
                                     <select class="form-select" id="champ1" name="champ1" required
-                                        onchange="updatePreview(champ1, champ1Preview)">
+                                        onchange="updateChampPreview(champ1, champ1Preview)">
                                         <option value="" disabled selected hidden>Select champion</option>
                                         <option value="amumu">Amumu</option>
                                         <option value="ashe">Ashe</option>
@@ -126,9 +125,17 @@
                                         <option value="zyra">Zyra</option>
                                     </select>
 
-                                    <!-- Select Build Items (3) -->
-                                    <label class="form-label mt-4" for="build1Item1">Build:</label>
-                                    <select class="form-select" id="build1Item1" name="build1Item1" required>
+                                    <!-- Items -->
+                                    <label class="form-label mt-2" for="build1Item1">Build:</label>
+
+                                    <div class="d-flex justify-content-center gap-1 mb-2">
+                                        <img id="build1Item1Preview" src="images/item_rune_placeholder.png" width="32">
+                                        <img id="build1Item2Preview" src="images/item_rune_placeholder.png" width="32">
+                                        <img id="build1Item3Preview" src="images/item_rune_placeholder.png" width="32">
+                                    </div>
+
+                                    <select class="form-select" id="build1Item1" name="build1Item1" required
+                                        onchange="updateItemPreview(build1Item1, build1Item1Preview)">
                                         <option value="" disabled selected hidden>Select item 1</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -137,8 +144,12 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
-                                    <select class="form-select mt-3" id="build1Item2" name="build1Item2" required>
+                                    <select class="form-select mt-3" id="build1Item2" name="build1Item2" required
+                                        onchange="updateItemPreview(build1Item2, build1Item2Preview)">
                                         <option value="" disabled selected hidden>Select item 2</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -147,8 +158,12 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
-                                    <select class="form-select mt-3" id="build1Item3" name="build1Item3" required>
+                                    <select class="form-select mt-3" id="build1Item3" name="build1Item3" required
+                                        onchange="updateItemPreview(build1Item3, build1Item3Preview)">
                                         <option value="" disabled selected hidden>Select item 3</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -157,30 +172,39 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
 
-                                    <!-- Select rune (1) -->
-                                    <label class="form-label mt-4" for="rune1">Rune:</label>
-                                    <select class="form-select" id="rune1" name="rune1" required>
+                                    <!-- Rune -->
+                                    <label class="form-label mt-2" for="rune1">Rune:</label>
+                                    <br>
+                                    <img class="mb-2" id="build1RunePreview" src="images/item_rune_placeholder.png"
+                                        width="32">
+
+                                    <select class="form-select" id="rune1" name="rune1" required
+                                        onchange="updateRunePreview(rune1, build1RunePreview)">
                                         <option value="" disabled selected hidden>Select rune</option>
                                         <option value="Conqueror_rune">Conqueror</option>
                                         <option value="Hails_of_Blades_rune">Hails of Blade</option>
                                         <option value="Lethal_Tempo_rune">Lethal Tempo</option>
                                         <option value="Press_the_Attack_rune">Press the Attack</option>
+                                        <option value="Arcane_Comet_rune">Arcane Comet</option>
+                                        <option value="Grasp_of_the_Undying_rune">Grasp of the Undying</option>
+                                        <option value="Summon_Aery_rune">Summon Aery</option>
                                     </select>
                                 </div>
-
 
                                 <!-- Champion 2 -->
                                 <div class="col-6 col-md-2">
+                                    <label class="form-label mt-2" for="champ2">Champion:</label>
+                                    <br>
+                                    <img class="mb-2" id="champ2Preview" src="images/champ_icons/champ_placeholder.png"
+                                        width="80">
 
-                                    <!-- Champion preview image -->
-                                    <img class="mb-2" id="champ2Preview" src="images/champ_icons/champ_placeholder.png" width="80">
-
-                                    <!-- Select Champion -->
-                                    <label class="form-label mt-4" for="champ2">Champion:</label>
                                     <select class="form-select" id="champ2" name="champ2" required
-                                        onchange="updatePreview(champ2, champ2Preview)">
+                                        onchange="updateChampPreview(champ2, champ2Preview)">
                                         <option value="" disabled selected hidden>Select champion</option>
                                         <option value="amumu">Amumu</option>
                                         <option value="ashe">Ashe</option>
@@ -203,9 +227,17 @@
                                         <option value="zyra">Zyra</option>
                                     </select>
 
-                                    <!-- Select Build Items (3) -->
-                                    <label class="form-label mt-4" for="build2Item1">Build:</label>
-                                    <select class="form-select" id="build2Item1" name="build2Item1" required>
+                                    <!-- Items -->
+                                    <label class="form-label mt-2" for="build2Item1">Build:</label>
+
+                                    <div class="d-flex justify-content-center gap-1 mb-2">
+                                        <img id="build2Item1Preview" src="images/item_rune_placeholder.png" width="32">
+                                        <img id="build2Item2Preview" src="images/item_rune_placeholder.png" width="32">
+                                        <img id="build2Item3Preview" src="images/item_rune_placeholder.png" width="32">
+                                    </div>
+
+                                    <select class="form-select" id="build2Item1" name="build2Item1" required
+                                        onchange="updateItemPreview(build2Item1, build2Item1Preview)">
                                         <option value="" disabled selected hidden>Select item 1</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -214,8 +246,12 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
-                                    <select class="form-select mt-3" id="build2Item2" name="build2Item2" required>
+                                    <select class="form-select mt-3" id="build2Item2" name="build2Item2" required
+                                        onchange="updateItemPreview(build2Item2, build2Item2Preview)">
                                         <option value="" disabled selected hidden>Select item 2</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -224,8 +260,12 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
-                                    <select class="form-select mt-3" id="build2Item3" name="build2Item3" required>
+                                    <select class="form-select mt-3" id="build2Item3" name="build2Item3" required
+                                        onchange="updateItemPreview(build2Item3, build2Item3Preview)">
                                         <option value="" disabled selected hidden>Select item 3</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -234,30 +274,39 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
 
-                                    <!-- Select rune (1) -->
-                                    <label class="form-label mt-4" for="rune2">Rune:</label>
-                                    <select class="form-select" id="rune2" name="rune2" required>
+                                    <!-- Rune -->
+                                    <label class="form-label mt-2" for="rune2">Rune:</label>
+                                    <br>
+                                    <img class="mb-2" id="build2RunePreview" src="images/item_rune_placeholder.png"
+                                        width="32">
+
+                                    <select class="form-select" id="rune2" name="rune2" required
+                                        onchange="updateRunePreview(rune2, build2RunePreview)">
                                         <option value="" disabled selected hidden>Select rune</option>
                                         <option value="Conqueror_rune">Conqueror</option>
                                         <option value="Hails_of_Blades_rune">Hails of Blade</option>
                                         <option value="Lethal_Tempo_rune">Lethal Tempo</option>
                                         <option value="Press_the_Attack_rune">Press the Attack</option>
+                                        <option value="Arcane_Comet_rune">Arcane Comet</option>
+                                        <option value="Grasp_of_the_Undying_rune">Grasp of the Undying</option>
+                                        <option value="Summon_Aery_rune">Summon Aery</option>
                                     </select>
                                 </div>
-
 
                                 <!-- Champion 3 -->
                                 <div class="col-6 col-md-2">
+                                    <label class="form-label mt-2" for="champ3">Champion:</label>
+                                    <br>
+                                    <img class="mb-2" id="champ3Preview" src="images/champ_icons/champ_placeholder.png"
+                                        width="80">
 
-                                    <!-- Champion preview image -->
-                                    <img class="mb-2" id="champ3Preview" src="images/champ_icons/champ_placeholder.png" width="80">
-
-                                    <!-- Select Champion -->
-                                    <label class="form-label mt-4" for="champ3">Champion:</label>
                                     <select class="form-select" id="champ3" name="champ3" required
-                                        onchange="updatePreview(champ3, champ3Preview)">
+                                        onchange="updateChampPreview(champ3, champ3Preview)">
                                         <option value="" disabled selected hidden>Select champion</option>
                                         <option value="amumu">Amumu</option>
                                         <option value="ashe">Ashe</option>
@@ -280,9 +329,17 @@
                                         <option value="zyra">Zyra</option>
                                     </select>
 
-                                    <!-- Select Build Items (3) -->
-                                    <label class="form-label mt-4" for="build3Item1">Build:</label>
-                                    <select class="form-select" id="build3Item1" name="build3Item1" required>
+                                    <!-- Items -->
+                                    <label class="form-label mt-2" for="build3Item1">Build:</label>
+
+                                    <div class="d-flex justify-content-center gap-1 mb-2">
+                                        <img id="build3Item1Preview" src="images/item_rune_placeholder.png" width="32">
+                                        <img id="build3Item2Preview" src="images/item_rune_placeholder.png" width="32">
+                                        <img id="build3Item3Preview" src="images/item_rune_placeholder.png" width="32">
+                                    </div>
+
+                                    <select class="form-select" id="build3Item1" name="build3Item1" required
+                                        onchange="updateItemPreview(build3Item1, build3Item1Preview)">
                                         <option value="" disabled selected hidden>Select item 1</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -291,8 +348,12 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
-                                    <select class="form-select mt-3" id="build3Item2" name="build3Item2" required>
+                                    <select class="form-select mt-3" id="build3Item2" name="build3Item2" required
+                                        onchange="updateItemPreview(build3Item2, build3Item2Preview)">
                                         <option value="" disabled selected hidden>Select item 2</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -301,8 +362,12 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
-                                    <select class="form-select mt-3" id="build3Item3" name="build3Item3" required>
+                                    <select class="form-select mt-3" id="build3Item3" name="build3Item3" required
+                                        onchange="updateItemPreview(build3Item3, build3Item3Preview)">
                                         <option value="" disabled selected hidden>Select item 3</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -311,30 +376,39 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
 
-                                    <!-- Select rune (1) -->
-                                    <label class="form-label mt-4" for="rune3">Rune:</label>
-                                    <select class="form-select" id="rune3" name="rune3" required>
+                                    <!-- Rune -->
+                                    <label class="form-label mt-2" for="rune3">Rune:</label>
+                                    <br>
+                                    <img class="mb-2" id="build3RunePreview" src="images/item_rune_placeholder.png"
+                                        width="32">
+
+                                    <select class="form-select" id="rune3" name="rune3" required
+                                        onchange="updateRunePreview(rune3, build3RunePreview)">
                                         <option value="" disabled selected hidden>Select rune</option>
                                         <option value="Conqueror_rune">Conqueror</option>
                                         <option value="Hails_of_Blades_rune">Hails of Blade</option>
                                         <option value="Lethal_Tempo_rune">Lethal Tempo</option>
                                         <option value="Press_the_Attack_rune">Press the Attack</option>
+                                        <option value="Arcane_Comet_rune">Arcane Comet</option>
+                                        <option value="Grasp_of_the_Undying_rune">Grasp of the Undying</option>
+                                        <option value="Summon_Aery_rune">Summon Aery</option>
                                     </select>
                                 </div>
 
-
                                 <!-- Champion 4 -->
                                 <div class="col-6 col-md-2">
+                                    <label class="form-label mt-2" for="champ4">Champion:</label>
+                                    <br>
+                                    <img class="mb-2" id="champ4Preview" src="images/champ_icons/champ_placeholder.png"
+                                        width="80">
 
-                                    <!-- Champion preview image -->
-                                    <img class="mb-2" id="champ4Preview" src="images/champ_icons/champ_placeholder.png" width="80">
-
-                                    <!-- Select Champion -->
-                                    <label class="form-label mt-4" for="champ4">Champion:</label>
                                     <select class="form-select" id="champ4" name="champ4" required
-                                        onchange="updatePreview(champ4, champ4Preview)">
+                                        onchange="updateChampPreview(champ4, champ4Preview)">
                                         <option value="" disabled selected hidden>Select champion</option>
                                         <option value="amumu">Amumu</option>
                                         <option value="ashe">Ashe</option>
@@ -357,9 +431,17 @@
                                         <option value="zyra">Zyra</option>
                                     </select>
 
-                                    <!-- Select Build Items (3) -->
-                                    <label class="form-label mt-4" for="build4Item1">Build:</label>
-                                    <select class="form-select" id="build4Item1" name="build4Item1" required>
+                                    <!-- Items -->
+                                    <label class="form-label mt-2" for="build4Item1">Build:</label>
+
+                                    <div class="d-flex justify-content-center gap-1 mb-2">
+                                        <img id="build4Item1Preview" src="images/item_rune_placeholder.png" width="32">
+                                        <img id="build4Item2Preview" src="images/item_rune_placeholder.png" width="32">
+                                        <img id="build4Item3Preview" src="images/item_rune_placeholder.png" width="32">
+                                    </div>
+
+                                    <select class="form-select" id="build4Item1" name="build4Item1" required
+                                        onchange="updateItemPreview(build4Item1, build4Item1Preview)">
                                         <option value="" disabled selected hidden>Select item 1</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -368,8 +450,12 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
-                                    <select class="form-select mt-3" id="build4Item2" name="build4Item2" required>
+                                    <select class="form-select mt-3" id="build4Item2" name="build4Item2" required
+                                        onchange="updateItemPreview(build4Item2, build4Item2Preview)">
                                         <option value="" disabled selected hidden>Select item 2</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -378,8 +464,12 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
-                                    <select class="form-select mt-3" id="build4Item3" name="build4Item3" required>
+                                    <select class="form-select mt-3" id="build4Item3" name="build4Item3" required
+                                        onchange="updateItemPreview(build4Item3, build4Item3Preview)">
                                         <option value="" disabled selected hidden>Select item 3</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -388,29 +478,39 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
 
-                                    <!-- Select rune (1) -->
-                                    <label class="form-label mt-4" for="rune4">Rune:</label>
-                                    <select class="form-select" id="rune4" name="rune4" required>
+                                    <!-- Rune -->
+                                    <label class="form-label mt-2" for="rune4">Rune:</label>
+                                    <br>
+                                    <img class="mb-2" id="build4RunePreview" src="images/item_rune_placeholder.png"
+                                        width="32">
+
+                                    <select class="form-select" id="rune4" name="rune4" required
+                                        onchange="updateRunePreview(rune4, build4RunePreview)">
                                         <option value="" disabled selected hidden>Select rune</option>
                                         <option value="Conqueror_rune">Conqueror</option>
                                         <option value="Hails_of_Blades_rune">Hails of Blade</option>
                                         <option value="Lethal_Tempo_rune">Lethal Tempo</option>
                                         <option value="Press_the_Attack_rune">Press the Attack</option>
+                                        <option value="Arcane_Comet_rune">Arcane Comet</option>
+                                        <option value="Grasp_of_the_Undying_rune">Grasp of the Undying</option>
+                                        <option value="Summon_Aery_rune">Summon Aery</option>
                                     </select>
                                 </div>
 
                                 <!-- Champion 5 -->
                                 <div class="col-6 col-md-2">
+                                    <label class="form-label mt-2" for="champ5">Champion:</label>
+                                    <br>
+                                    <img class="mb-2" id="champ5Preview" src="images/champ_icons/champ_placeholder.png"
+                                        width="80">
 
-                                    <!-- Champion preview image -->
-                                    <img class="mb-2" id="champ5Preview" src="images/champ_icons/champ_placeholder.png" width="80">
-
-                                    <!-- Select Champion -->
-                                    <label class="form-label mt-4" for="champ5">Champion:</label>
                                     <select class="form-select" id="champ5" name="champ5" required
-                                        onchange="updatePreview(champ5, champ5Preview)">
+                                        onchange="updateChampPreview(champ5, champ5Preview)">
                                         <option value="" disabled selected hidden>Select champion</option>
                                         <option value="amumu">Amumu</option>
                                         <option value="ashe">Ashe</option>
@@ -433,9 +533,17 @@
                                         <option value="zyra">Zyra</option>
                                     </select>
 
-                                    <!-- Select Build Items (3) -->
-                                    <label class="form-label mt-4" for="build5Item1">Build:</label>
-                                    <select class="form-select" id="build5Item1" name="build5Item1" required>
+                                    <!-- Items -->
+                                    <label class="form-label mt-2" for="build5Item1">Build:</label>
+
+                                    <div class="d-flex justify-content-center gap-1 mb-2">
+                                        <img id="build5Item1Preview" src="images/item_rune_placeholder.png" width="32">
+                                        <img id="build5Item2Preview" src="images/item_rune_placeholder.png" width="32">
+                                        <img id="build5Item3Preview" src="images/item_rune_placeholder.png" width="32">
+                                    </div>
+
+                                    <select class="form-select" id="build5Item1" name="build5Item1" required
+                                        onchange="updateItemPreview(build5Item1, build5Item1Preview)">
                                         <option value="" disabled selected hidden>Select item 1</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -444,8 +552,12 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
-                                    <select class="form-select mt-3" id="build5Item2" name="build5Item2" required>
+                                    <select class="form-select mt-3" id="build5Item2" name="build5Item2" required
+                                        onchange="updateItemPreview(build5Item2, build5Item2Preview)">
                                         <option value="" disabled selected hidden>Select item 2</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -454,8 +566,12 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
-                                    <select class="form-select mt-3" id="build5Item3" name="build5Item3" required>
+                                    <select class="form-select mt-3" id="build5Item3" name="build5Item3" required
+                                        onchange="updateItemPreview(build5Item3, build5Item3Preview)">
                                         <option value="" disabled selected hidden>Select item 3</option>
                                         <option value="bork">Blade of the Ruined King</option>
                                         <option value="celestial_opposition">Celestial Opposition</option>
@@ -464,16 +580,27 @@
                                         <option value="steraks_gage">Steraks Gage</option>
                                         <option value="trinity_force">Trinity Force</option>
                                         <option value="void_staff">Void Staff</option>
+                                        <option value="rapid_firecannon">Rapid Firecannon</option>
+                                        <option value="sunfire_aegis">Sunfire Aegis</option>
+                                        <option value="terminus">Terminus</option>
                                     </select>
 
-                                    <!-- Select rune (1) -->
-                                    <label class="form-label mt-4" for="rune5">Rune:</label>
-                                    <select class="form-select" id="rune5" name="rune5" required>
+                                    <!-- Rune -->
+                                    <label class="form-label mt-2" for="rune5">Rune:</label>
+                                    <br>
+                                    <img class="mb-2" id="build5RunePreview" src="images/item_rune_placeholder.png"
+                                        width="32">
+
+                                    <select class="form-select" id="rune5" name="rune5" required
+                                        onchange="updateRunePreview(rune5, build5RunePreview)">
                                         <option value="" disabled selected hidden>Select rune</option>
                                         <option value="Conqueror_rune">Conqueror</option>
                                         <option value="Hails_of_Blades_rune">Hails of Blade</option>
                                         <option value="Lethal_Tempo_rune">Lethal Tempo</option>
                                         <option value="Press_the_Attack_rune">Press the Attack</option>
+                                        <option value="Arcane_Comet_rune">Arcane Comet</option>
+                                        <option value="Grasp_of_the_Undying_rune">Grasp of the Undying</option>
+                                        <option value="Summon_Aery_rune">Summon Aery</option>
                                     </select>
                                 </div>
 
@@ -506,8 +633,7 @@
                                 Why do I need a password?
                             </button>
                         </div>
-                        <div id="passwordHelpText" class="form-text"
-                            style="visibility: hidden; color: white;">
+                        <div id="passwordHelpText" class="form-text" style="visibility: hidden; color: white;">
                             Create a password to protect your post so that you can edit or delete it later.
                         </div>
 
@@ -535,7 +661,6 @@
         </div>
     </div>
 
-
     <!-- Footer -->
     <footer class="text-center p-3 bg-black" style="font-size: 0.9rem; color:#aeaeae;">
         © 2026 EQLoL: League of Legends Team Builder ·
@@ -550,21 +675,42 @@
 
     <script>
         const helpText = document.getElementById("passwordHelpText");
+        const helpBtn = document.getElementById("passwordHelp");
 
-        // Toggle visibility for password help text.
+        /* Purpose: Toggle visibility for password help text.
+         * Parameters: none
+         * Return: none
+         */
         function showHideHelp() {
             if (helpText.style.visibility === "hidden") {
-                helpText.style.visibility = "visible"
+                helpText.style.visibility = "visible";
             } else {
-                helpText.style.visibility = "hidden"
+                helpText.style.visibility = "hidden";
             }
         }
-    </script>
 
-    <script>
-        // Update champion preview image with selected champion from dropdown.
-        function updatePreview(champ, preview) {
+        /* Purpose: Update champion preview image with selected champion from dropdown.
+         * Parameters: champ (icon file name), preview (preview image ID)
+         * Return: none
+         */
+        function updateChampPreview(champ, preview) {
             preview.src = "images/champ_icons/" + champ.value + ".png";
+        }
+
+        /* Purpose: Update item preview image with selected item from dropdown.
+         * Parameters: item (icon file name), preview (preview image ID)
+         * Return: none
+         */
+        function updateItemPreview(item, preview) {
+            preview.src = "images/items_icons/" + item.value + ".png";
+        }
+
+        /* Purpose: Update rune preview image with selected rune from dropdown.
+         * Parameters: rune (icon file name), preview (preview image ID)
+         * Return: none
+         */
+        function updateRunePreview(rune, preview) {
+            preview.src = "images/runes_icons/" + rune.value + ".png";
         }
     </script>
 
