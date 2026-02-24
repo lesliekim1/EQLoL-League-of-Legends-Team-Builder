@@ -343,11 +343,11 @@ footer a:hover {
     transform: scale(1.05);
 }
 
-#passwordHelp {
+.password-help {
     color: #93c4fd;
 }
 
-#passwordHelp:hover {
+.password-help:hover {
     color: #bfd5fe;
 }
 

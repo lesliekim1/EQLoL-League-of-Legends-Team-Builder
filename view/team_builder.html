@@ -97,9 +97,13 @@
                                 <!-- Champion 1 -->
                                 <div class="col-6 col-md-2">
 
+                                    <!-- Champion preview image -->
+                                    <img class="mb-2" id="champ1Preview" src="images/champ_icons/champ_placeholder.png" width="80">
+
                                     <!-- Select Champion -->
                                     <label class="form-label mt-4" for="champ1">Champion:</label>
-                                    <select class="form-select" id="champ1" name="champ1" required>
+                                    <select class="form-select" id="champ1" name="champ1" required
+                                        onchange="updatePreview(champ1, champ1Preview)">
                                         <option value="" disabled selected hidden>Select champion</option>
                                         <option value="amumu">Amumu</option>
                                         <option value="ashe">Ashe</option>
@@ -170,9 +174,13 @@
                                 <!-- Champion 2 -->
                                 <div class="col-6 col-md-2">
 
+                                    <!-- Champion preview image -->
+                                    <img class="mb-2" id="champ2Preview" src="images/champ_icons/champ_placeholder.png" width="80">
+
                                     <!-- Select Champion -->
                                     <label class="form-label mt-4" for="champ2">Champion:</label>
-                                    <select class="form-select" id="champ2" name="champ2" required>
+                                    <select class="form-select" id="champ2" name="champ2" required
+                                        onchange="updatePreview(champ2, champ2Preview)">
                                         <option value="" disabled selected hidden>Select champion</option>
                                         <option value="amumu">Amumu</option>
                                         <option value="ashe">Ashe</option>
@@ -243,9 +251,13 @@
                                 <!-- Champion 3 -->
                                 <div class="col-6 col-md-2">
 
+                                    <!-- Champion preview image -->
+                                    <img class="mb-2" id="champ3Preview" src="images/champ_icons/champ_placeholder.png" width="80">
+
                                     <!-- Select Champion -->
                                     <label class="form-label mt-4" for="champ3">Champion:</label>
-                                    <select class="form-select" id="champ3" name="champ3" required>
+                                    <select class="form-select" id="champ3" name="champ3" required
+                                        onchange="updatePreview(champ3, champ3Preview)">
                                         <option value="" disabled selected hidden>Select champion</option>
                                         <option value="amumu">Amumu</option>
                                         <option value="ashe">Ashe</option>
@@ -316,9 +328,13 @@
                                 <!-- Champion 4 -->
                                 <div class="col-6 col-md-2">
 
+                                    <!-- Champion preview image -->
+                                    <img class="mb-2" id="champ4Preview" src="images/champ_icons/champ_placeholder.png" width="80">
+
                                     <!-- Select Champion -->
                                     <label class="form-label mt-4" for="champ4">Champion:</label>
-                                    <select class="form-select" id="champ4" name="champ4" required>
+                                    <select class="form-select" id="champ4" name="champ4" required
+                                        onchange="updatePreview(champ4, champ4Preview)">
                                         <option value="" disabled selected hidden>Select champion</option>
                                         <option value="amumu">Amumu</option>
                                         <option value="ashe">Ashe</option>
@@ -388,9 +404,13 @@
                                 <!-- Champion 5 -->
                                 <div class="col-6 col-md-2">
 
+                                    <!-- Champion preview image -->
+                                    <img class="mb-2" id="champ5Preview" src="images/champ_icons/champ_placeholder.png" width="80">
+
                                     <!-- Select Champion -->
                                     <label class="form-label mt-4" for="champ5">Champion:</label>
-                                    <select class="form-select" id="champ5" name="champ5" required>
+                                    <select class="form-select" id="champ5" name="champ5" required
+                                        onchange="updatePreview(champ5, champ5Preview)">
                                         <option value="" disabled selected hidden>Select champion</option>
                                         <option value="amumu">Amumu</option>
                                         <option value="ashe">Ashe</option>
@@ -482,13 +502,13 @@
 
                         <!-- Password help tip -->
                         <div class="mt-2">
-                            <button type="button" class="btn btn-link p-0" id="passwordHelp" onclick="showHideHelp()">
+                            <button type="button" class="btn btn-link p-0 password-help" onclick="showHideHelp()">
                                 Why do I need a password?
                             </button>
                         </div>
-                        <div id="passwordHelpText" class="password-help form-text"
+                        <div id="passwordHelpText" class="form-text"
                             style="visibility: hidden; color: white;">
-                            Create a password to protect your post so you can edit or delete it later.
+                            Create a password to protect your post so that you can edit or delete it later.
                         </div>
 
 
@@ -538,6 +558,13 @@
             } else {
                 helpText.style.visibility = "hidden"
             }
+        }
+    </script>
+
+    <script>
+        // Update champion preview image with selected champion from dropdown.
+        function updatePreview(champ, preview) {
+            preview.src = "images/champ_icons/" + champ.value + ".png";
         }
     </script>
 
