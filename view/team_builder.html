@@ -59,7 +59,6 @@
         </div>
     </nav>
 
-
     <div class="container py-5">
         <div class="build-container mx-auto">
             <h1>League of Legends Team Builder</h1>
@@ -86,7 +85,7 @@
 
                 </section>
 
-
+                <!-- Team -->
                 <section class="mt-4">
                     <div class="form-section">
                         <h2 class="form-title">Champions & Builds <span class="form-span">(required)</span></h2>
@@ -610,7 +609,7 @@
                     </div>
                 </section>
 
-
+                <!-- Guide -->
                 <section class="mt-4">
                     <div class="form-section">
                         <h2 class="form-title">Guide <span class="form-span">(optional)</span></h2>
@@ -622,7 +621,7 @@
                     </div>
                 </section>
 
-
+                <!-- Post Password -->
                 <section class="mt-4">
                     <div class="form-section">
                         <h2 class="form-title">Post Protection <span class="form-span">(required)</span></h2>
@@ -636,7 +635,6 @@
                         <div id="passwordHelpText" class="form-text" style="visibility: hidden; color: white;">
                             Create a password to protect your post so that you can edit or delete it later.
                         </div>
-
 
                         <div class="form-body">
                             <label class="form-label" for="post_password">Password:</label>
@@ -667,20 +665,11 @@
         <a href="#" style="color:#aeaeae; text-decoration:none;">About</a>
     </footer>
 
-
-    <!-- Bootstrap Javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
-
     <script>
         const helpText = document.getElementById("passwordHelpText");
         const helpBtn = document.getElementById("passwordHelp");
 
-        /* Purpose: Toggle visibility for password help text.
-         * Parameters: none
-         * Return: none
-         */
+        // Toggle visibility for password help text.
         function showHideHelp() {
             if (helpText.style.visibility === "hidden") {
                 helpText.style.visibility = "visible";
@@ -689,31 +678,26 @@
             }
         }
 
-        /* Purpose: Update champion preview image with selected champion from dropdown.
-         * Parameters: champ (icon file name), preview (preview image ID)
-         * Return: none
-         */
-        function updateChampPreview(champ, preview) {
-            preview.src = "images/champ_icons/" + champ.value + ".png";
+        // Update champion preview image with selected champion from dropdown.
+        function updateChampPreview(champ, previewImg) {
+            previewImg.setAttribute("src", "images/champ_icons/" + champ.value + ".png");
         }
 
-        /* Purpose: Update item preview image with selected item from dropdown.
-         * Parameters: item (icon file name), preview (preview image ID)
-         * Return: none
-         */
-        function updateItemPreview(item, preview) {
-            preview.src = "images/items_icons/" + item.value + ".png";
+        // Update item preview image with selected item from dropdown.
+        function updateItemPreview(item, previewImg) {
+            previewImg.setAttribute("src", "images/items_icons/" + item.value + ".png");
         }
 
-        /* Purpose: Update rune preview image with selected rune from dropdown.
-         * Parameters: rune (icon file name), preview (preview image ID)
-         * Return: none
-         */
-        function updateRunePreview(rune, preview) {
-            preview.src = "images/runes_icons/" + rune.value + ".png";
+        // Update rune preview image with selected rune from dropdown.
+        function updateRunePreview(rune, previewImg) {
+            previewImg.setAttribute("src", "images/runes_icons/" + rune.value + ".png");
         }
     </script>
 
+    <!-- Bootstrap Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
