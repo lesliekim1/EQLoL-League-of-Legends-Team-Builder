@@ -4,9 +4,12 @@ EQLoL: League of Legends Team Builder is a team builder web application for the 
 
 **Note:** This project is a simplified team builder app. It includes a limited set of champions (instead of 170+), and each build is represented by three core items (instead of six) and one main rune (instead of a full rune path).
 
-# Running
+## Running
 
 To run this project, use the following command on terminal: 
 ```bash
 placeholder
 ```
+
+## License 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
